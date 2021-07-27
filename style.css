@@ -1,0 +1,52 @@
+*{
+    margin: :0px;
+}
+body{
+    /* font-family: sans-serif; */
+}
+.heading {
+    font-size: 65px;
+
+}
+#clock {
+    margin: auto;
+    /* text-align: center; */
+    font-family: 'Orbitron', sans-serif;
+    font-weight:bolder;
+    font-size: 150px;
+    cursor: pointer;
+
+}
+
+.text{
+    text-align: center;
+    /* margin: auto; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    
+}
+.link{
+    text-decoration: none;
+    color: black;
+
+}
+a:hover{
+    color: black;
+}
+.button{
+    border: none;
+}
+.stopwatch {
+    margin: auto;
+    /* text-align: center; */
+    font-family: 'Orbitron', sans-serif;
+    font-weight:bolder;
+    font-size: 150px;
+    cursor: pointer;
+}
+.sec {
+    margin-right: 50px;
+}
+.danger{
+    margin-left: 50px;
+}

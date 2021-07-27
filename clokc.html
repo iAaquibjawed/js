@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    
+    <!-- <div style="">12:04PM</div> -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-5 ">
+        <div class=" mt-5 text ">
+            <h1 class="heading">Digital clock</h1>
+           
+                <div id="clock" class="mt-5"  onclick="stop()">
+
+                </div>
+            
+        </div>
+        <div id="he"></div>
+    </div>
+    <div class="container mt-5 ">
+        <div class=" mt-5 text ">
+            <h1 class="heading">Stop Watch</h1>
+           
+                <div id="stopwatch" class="mt-5 stopwatch">
+
+                </div>
+                <div>
+                    <button class="btn btn-secondary sec" onclick="reset()">Reset</button>
+                    <button class="btn btn-danger danger">Stop</button>
+                </div>
+            
+        </div>
+        <div id="he"></div>
+    </div>
+    
+    <script>
+        var v = 1000;
+        function stop(){
+             return v = 1000000;
+        }
+
+        function check(d){
+            if(d<10){
+                d = "0"+d;
+            }
+            return d;
+        }
+    //    function checkhour(hour){
+    //        if(hour<12){
+    //            hours = 
+    //        }
+    //    }
+        function gettime(){
+            var hours = check(checkhour(hour));
+            var time = new Date();
+            var hour = time.getHours();
+            var min = check(time.getMinutes());
+            var sec = check(time.getSeconds());
+            var hours = check(checkhour(hour));
+            var meridian = checkmeridian(check(time.getHours()));
+            var formate = hours+ ":"+ min +":"+sec +":" + meridian;
+            setTimeout(function(){gettime()}, v)
+            document.getElementById("clock").innerHTML = formate;
+            function checkhour(h){
+                if(h>12){
+                    hours = hour-12
+                }
+                else{
+                    hours = hour 
+                }
+                return hours;
+            }
+            
+        }
+        gettime()
+       
+
+        function checkmeridian(hour){
+            if(hour<12){
+                meridian = "Am"
+            }
+            else{
+                meridian = "Pm"
+            }
+            return meridian
+        }
+        function changemin(){
+            min = "00"
+
+        }
+ var min = "07";
+        var sec = "18"; 
+        var cs  = "45"; 
+        function reset(){
+            min = "00";
+            sec = "00";
+            cs =  "00";
+            time = min + ":"+ sec + ":"+ cs;
+        document.getElementById("stopwatch").innerHTML = time;            
+        }
+        var time = min + ":"+ sec + ":"+ cs;
+        document.getElementById("stopwatch").innerHTML = time;
+        
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
